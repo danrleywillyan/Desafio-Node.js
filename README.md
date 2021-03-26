@@ -39,5 +39,7 @@
 - - escolhi express-swagger-generator em função do tempo
 - - documentando endpoints
 
+- integração contínua no heroku
+
 - planejando gerenciamento de permissões
 - - 

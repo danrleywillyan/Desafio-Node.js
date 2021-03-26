@@ -110,3 +110,5 @@ function initial() {
         }
     });
   }
+
+  module.exports = app
