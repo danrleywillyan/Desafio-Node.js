@@ -15,6 +15,8 @@ checkDuplicateCPF = (req, res, next) => {
             res.status(400).send({ message: "Failed! CPF is already in use!" });
             return;
         }
+
+        next();
     });
 };
 
