@@ -1,0 +1,7 @@
+- criando projeto
+- - npm init
+- - instalando express, mongoose, body-parser, cors, jsonwebtoken, bcryptjs
+- - criando servidor (server.js) da aplicação
+- - instalando nodemon para hot reload
+- - instalando insomnia (postman equivalente) para testar requisições
+- - 
