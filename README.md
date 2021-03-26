@@ -1,3 +1,7 @@
+- Definindo arquitetura
+- - MongoDB Atlas (migrar depois)
+- - NodeJS - express, mongoose, jwt, bcrypt e swagger
+
 - criando projeto
 - - npm init
 - - instalando express, mongoose, body-parser, cors, jsonwebtoken, bcryptjs
@@ -29,3 +33,11 @@
 - - signup - se não for informado uma role, usar seller
 - - signin - encontrar user no banco, comparar password, gerar token, retornar info e token
 - - testando e commitando modificações
+
+- documentando api
+- - testando diferentes métodos para implementar swagger na aplicação
+- - escolhi express-swagger-generator em função do tempo
+- - documentando endpoints
+
+- planejando gerenciamento de permissões
+- - 

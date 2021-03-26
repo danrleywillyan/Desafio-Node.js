@@ -10,6 +10,16 @@ module.exports = function(app) {
         next();
     });
 
+    /**
+     * This function comment is parsed by doctrine
+     * @route POST /api/auth/signup
+     * @group auth - login e signup
+     * @param {string} cpf.query.required - cpf - eg: 05845685645645
+     * @param {string} password.query.required - user's password.
+     * @param {string} token.header.required - token
+     * @returns {object} 200 - An array of user info
+     * @returns {Error}  default - Unexpected error
+     */
     app.post(
         "/api/auth/signup",
         [
@@ -19,5 +29,14 @@ module.exports = function(app) {
         controller.signup
     );
 
+    /**
+     * This function comment is parsed by doctrine
+     * @route POST /api/auth/signin
+     * @group auth - login e signup
+     * @param {json} cpf.json.required - cpf - eg: 05845685645645
+     * @param {string} password.query.required - user's password.
+     * @returns {object} 200 - An array of user info
+     * @returns {Error}  default - Unexpected error
+     */
     app.post("/api/auth/signin", controller.signin);
 };

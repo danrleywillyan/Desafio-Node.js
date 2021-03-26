@@ -7,6 +7,36 @@ const dbConfig = require("./src/config/db.config");
 
 const app = express();
 
+// swagger documentation of api
+const expressSwagger = require('express-swagger-generator')(app);
+let options = {
+    swaggerDefinition: {
+        info: {
+            description: 'Desafio nodejs',
+            title: 'Swagger',
+            version: '1.0.0',
+        },
+        host: 'localhost:8080',
+        basePath: '/api',
+        produces: [
+            "application/json",
+            "application/xml"
+        ],
+        schemes: ['http', 'https'],
+        securityDefinitions: {
+            JWT: {
+                type: 'apiKey',
+                in: 'header',
+                name: 'Authorization',
+                description: "",
+            }
+        }
+    },
+    basedir: __dirname, //app absolute path
+    files: ['./src/routes/**/*.js'] //Path to the API handle folder
+};
+expressSwagger(options)
+
 var corsOptions = {
   origin: "http://localhost:8081"
 };
@@ -24,6 +54,7 @@ const db = require('./src/models');
 // create Role mongoose object
 const Role = db.role;
 
+//mongodb+srv://ninja:Ninj4@cluster0-y3qpm.mongodb.net/rocktseat?retryWrites=true&w=majority
 db.mongoose
     .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
         useNewUrlParser: true,
@@ -46,7 +77,6 @@ app.get("/", (req, res) => {
 // routes
 require('./src/routes/auth.routes')(app);
 require('./src/routes/user.routes')(app);
-
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
