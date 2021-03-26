@@ -4,4 +4,13 @@
 - - criando servidor (server.js) da aplicação
 - - instalando nodemon para hot reload
 - - instalando insomnia (postman equivalente) para testar requisições
-- - 
+- - Primeira requisição e primeiro commit
+
+- database
+- - criando arquivo com variáveis do banco (db.config.js)
+- - criando modelos, decidi criar uma relação de um para muitos entre duas coleções Role e User
+- - após criar os modelos, preciso criar o "objeto" banco para gerenciar os modelos, models/index.js (é consenso criar arquivos index na comunidade js)
+- - instancindo o banco em server.js
+- - criando função para criar as roles da coleção no mongodb, se não criada ainda
+- - testando
+- - commitando modificações
