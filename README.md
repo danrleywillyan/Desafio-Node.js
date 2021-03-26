@@ -39,7 +39,9 @@
 - - escolhi express-swagger-generator em função do tempo
 - - documentando endpoints
 
-- integração contínua no heroku
+- DevOps
+- - action no github para rodar testes
+- - tentando fazer CI no heroku
 
 - planejando gerenciamento de permissões
 - - 
