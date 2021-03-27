@@ -54,9 +54,9 @@ const db = require('./src/models');
 // create Role mongoose object
 const Role = db.role;
 
-//mongodb+srv://ninja:Ninj4@cluster0-y3qpm.mongodb.net/rocktseat?retryWrites=true&w=majority
+// mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB} 
 db.mongoose
-    .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+    .connect(`${dbConfig.ATLAS}`, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
